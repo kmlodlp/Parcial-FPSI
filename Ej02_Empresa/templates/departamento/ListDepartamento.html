@@ -1,0 +1,29 @@
+
+{% extends 'home/base.html' %}
+    
+{% block content %}
+    <div class="grid-x">
+        <h1 class="cell align-content-center " >Lista de Departamentos</h1>
+        <div class="cell">
+            <table class="stack">
+                <thead>
+                    <tr>
+                        <th width="200"><b>ID</b></th>
+                        <th width="250"><b>DEPARTAMENTO</b></th>
+                        <th width="200"><b>ACCION</b></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for Departamento in Departamentos %}
+                    <tr>
+                        <td>{{ Departamento.id }}</td>
+                        <td>{{ Departamento.nom }}</td>
+                        <td><a class="button warning"
+                                href="{% url 'controlEmpleado_app:ver_pordpto' Departamento.nom %}">ver Empleados</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock content %}

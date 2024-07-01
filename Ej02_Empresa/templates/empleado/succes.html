@@ -1,0 +1,16 @@
+{% extends 'home/base.html' %}
+
+{% load static %}
+
+{% block title %} Resgistro Exitoso {% endblock title %}
+
+{% block content %}
+
+<h1 style="align-items: center;" class="estilo1"> Registro de Empleado
+    Exitoso...</h1>
+
+<!-- Buttons (actions) -->
+<a style="margin-left: 12px;"
+    href="{% url 'controlEmpleado_app:empleados_all' %}"
+    class="submit success button">Ver Empleados</a>
+{% endblock content %}

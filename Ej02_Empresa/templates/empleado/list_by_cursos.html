@@ -1,0 +1,17 @@
+
+
+
+<h1>Buscar cursos de Empleados</h1>
+<form method="GET">{% csrf_token %}
+    <label><b>ID</b></label>
+    <input type="number" id="valId" name="valId" placeholder="Ingrese el ID">
+    <button type="submit">Buscar</button>
+    
+</form>
+
+<h2>Cursos del Empleado</h2>
+<ul>
+    {%for rtaCursos in object_list%}
+        <li>{{rtaCursos}}</li>
+    {%endfor%}
+</ul>

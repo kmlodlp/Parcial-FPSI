@@ -1,0 +1,33 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+
+<h1>Sign In</h1>
+
+<h2>
+    {{error}}
+</h2>
+
+<form action="/signin/" method="POST">
+    {% csrf_token %}
+    <div class="container2">
+        <h1>Register</h1>
+        <div class="ctrl-form">
+            <input id="username" type="text" placeholder="USERNAME" />
+            <small></small>
+            <span></span>
+        </div>
+        <div class="ctrl-form">
+            <input id="password" type="password" placeholder="PASSWORD" />
+            <small></small>
+            <span></span>
+        </div>
+        <button>Sign In</button>
+        <div class="content">
+            <p>Do You Already Have An Account?</p>
+            <a href="#">Sign Up</a>
+        </div>
+    </div>
+</form>
+
+{% endblock %}

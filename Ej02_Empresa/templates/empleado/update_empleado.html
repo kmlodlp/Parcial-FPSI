@@ -1,0 +1,13 @@
+{% extends 'home/base.html' %}
+
+{% block title %} Actualizacion de Datos {% endblock title %}
+
+{% block content %}
+
+<h1>Modificar datos de empleado</h1>
+<form method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <button class="button warning" type="submit">Actualizar</button>
+</form>
+
+{% endblock content %}

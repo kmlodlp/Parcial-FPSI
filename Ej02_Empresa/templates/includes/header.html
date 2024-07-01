@@ -1,0 +1,25 @@
+<div class="top-bar">
+  <div class="top-bar-left">
+    <ul class="dropdown menu" data-dropdown-menu>
+      <li>
+        <a
+          href="{% url 'controlEmpleado_app:inicio' %}"><strong>Inicio</strong></a>
+      </li>
+      <li>
+        <a href="{% url 'controlEmpleado_app:empleados_all' %}">Empleados</a>
+      </li>
+      <li><a
+          href="{% url 'controlDepartamento_app:lista_Departamento' %}">Departamentos</a></li>
+      <li><a href="#" class="disabled">Administrar</a></li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+      <li><a href="{% url 'controlEmpleado_app:crear_empleado' %}"
+          class="button">Empleado Nuevo</a></li>
+      <!-- <li style="margin-left: 4px;"><a
+          href="{% url 'controlEmpleado_app:signin' %}"
+          class="button success">Sign In</a></li> -->
+    </ul>
+  </div>
+</div>

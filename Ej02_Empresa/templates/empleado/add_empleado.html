@@ -1,0 +1,12 @@
+{% extends 'home/base.html' %}
+
+{% block title %} Nuevo Registro {% endblock title %}
+
+{% block content %}
+<h1>Crear empleado</h1>
+<form method="post">
+    {% csrf_token %} {{ form.as_p }}
+    <button class="button" type="submit">Agregar</button>
+</form>
+
+{% endblock content %}

@@ -1,0 +1,32 @@
+{% extends 'home/base.html' %}
+<h1>Lista de empleados por departamento</h1>
+
+<!-- <ul>
+    
+    <li></li>
+</ul> -->
+<!-- {{ object_list }} -->
+{% block content %}
+<div class="grid-x">
+<div class="cell">
+    <table class="stack">
+        <thead>
+            <tr>
+                <th width="200"><b>ID</b></th>
+                <th width="250"><b>NOMBRE</b></th>
+                <th width="200"><b>DEPARTAMENTO</b></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for registro in object_list %}
+            <tr>
+                <td>{{ registro.id }}</td>
+                <td>{{ registro.nom }}</td>
+                <td>{{registro.dpto}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+</div>
+{% endblock content %}
